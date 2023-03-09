@@ -13,7 +13,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         return User
                 .builder()
                 .username(username)
-                .password("{noop}admin")
+                .password("{bcrypt}$2a$12$J1rA0tGIbtXKK9Z.oyXDheyz2s9QDsfH77pJQ70RygvIehNJlRPzO")
                 .roles("ADMIN", "USER")
                 .build();
     }
